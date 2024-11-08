@@ -6,7 +6,7 @@ import { HomePageData } from './types/page-info'
 import { fetchHighGraph } from './utils/fetchHighGraph'
 
 const getPageData = async (): Promise<HomePageData> => {
-    const query = `query PageInfoQuery {
+  const query = `query PageInfoQuery {
   page(where: {slug: "home"}) {
     introduction {
       raw
@@ -57,18 +57,18 @@ const getPageData = async (): Promise<HomePageData> => {
 }
   `
 
-    return fetchHighGraph(query, 60 * 60 * 24)
+  return fetchHighGraph(query, 60 * 60 * 24)
 }
 
 export default async function Home() {
-    const { page: pageData } = await getPageData()
+  const { page: pageData } = await getPageData()
 
-    return (
-        <>
-            <HeroSection homeInfo={pageData} />
-            <KnowTechs techs={pageData.knowTechs} />
-            <HighLightedProjects projects={pageData.highlightProjects} />
-            <WorkExperience works={pageData.workExperience} />
-        </>
-    )
+  return (
+    <>
+      <HeroSection homeInfo={pageData} />
+      <KnowTechs techs={pageData.knowTechs} />
+      <HighLightedProjects projects={pageData.highlightProjects} />
+      <WorkExperience works={pageData.workExperience} />
+    </>
+  )
 }
