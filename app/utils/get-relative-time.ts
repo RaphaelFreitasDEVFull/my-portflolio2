@@ -1,6 +1,6 @@
 export function getRelativeTimeString(
   date: Date | number,
-  lang = navigator.language
+  lang = navigator.language,
 ): string {
   const timeMs = typeof date === 'number' ? date : date.getTime()
   const deltaSeconds = Math.round((timeMs - Date.now()) / 1000)
@@ -26,7 +26,7 @@ export function getRelativeTimeString(
   ]
 
   const unitIndex = cutoffs.findIndex(
-    (cutoff) => cutoff > Math.abs(deltaSeconds)
+    (cutoff) => cutoff > Math.abs(deltaSeconds),
   )
 
   const divisor = unitIndex ? cutoffs[unitIndex - 1] : 1

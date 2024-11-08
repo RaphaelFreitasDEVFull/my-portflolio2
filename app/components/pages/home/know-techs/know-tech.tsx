@@ -9,7 +9,7 @@ type KnowTechProps = {
 const KnowTech = ({ tech }: KnowTechProps) => {
   const relatimeTime = getRelativeTimeString(
     new Date(tech.startDate),
-    'pt-BR'
+    'pt-BR',
   ).replace('há ', '')
 
   return (

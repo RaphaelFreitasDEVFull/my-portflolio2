@@ -47,7 +47,7 @@ const getPageDatails = async (slug: string): Promise<ProjectsPageData> => {
 
   return fetchHighGraph(
     query,
-    1000 * 60 * 60 * 24 // 1 day
+    1000 * 60 * 60 * 24, // 1 day
   )
 }
 
