@@ -1,7 +1,10 @@
 import { cn } from '@/app/lib/utils'
-import { ButtonHTMLAttributes } from 'react'
+import { ButtonHTMLAttributes, ReactNode } from 'react'
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+// Defina ButtonProps com todos os atributos do button HTML + children explicitamente
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  children: ReactNode
+}
 
 const Button = ({ children, className, ...props }: ButtonProps) => {
   return (
