@@ -7,7 +7,7 @@ type NavItemProps = {
   label: string
 }
 
-export const NavItem = ({ label, href }: NavItemProps) => {
+const NavItem = ({ label, href }: NavItemProps) => {
   const pathname = usePathname()
 
   const isActive = pathname === href
@@ -25,3 +25,5 @@ export const NavItem = ({ label, href }: NavItemProps) => {
     </Link>
   )
 }
+
+export default NavItem
