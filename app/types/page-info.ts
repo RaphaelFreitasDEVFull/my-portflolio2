@@ -6,20 +6,6 @@ export type Social = {
   iconSvg: string
 }
 
-export type HomePageInfo = {
-  introduction: {
-    raw: RichTextContent
-  }
-  technologies: KnowTechs[]
-  profilePicture: {
-    url: string
-  }
-  social: Social[]
-  knowTechs: KnowTechs[]
-  highlightProjects: Project[]
-  workExperience: WorkExperience[]
-}
-
 export type WorkExperience = {
   companyLogo: {
     url: string
@@ -33,6 +19,21 @@ export type WorkExperience = {
     raw: RichTextContent
   }
   technologies: KnowTechs[]
+}
+
+export type HomePageInfo = {
+  introduction: {
+    raw: RichTextContent
+  }
+
+  technologies: KnowTechs[]
+  profilePicture: {
+    url: string
+  }
+  social: Social[]
+  knowTechs: KnowTechs[]
+  highlightProjects: Project[]
+  workExperience: WorkExperience[]
 }
 
 export type ProjectsPageData = {

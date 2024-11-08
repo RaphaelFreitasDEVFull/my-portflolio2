@@ -22,7 +22,7 @@ const ExperienceItem = ({ work }: ExperienceItemProps) => {
     ? format(endDate, 'MMM yyyy', { locale: ptBR })
     : 'O momento'
 
-  const end = endDate ? endDate : new Date()
+  const end = endDate ?? new Date()
 
   const months = differenceInMonths(end, startDate)
   const years = differenceInYears(end, startDate)
@@ -60,6 +60,7 @@ const ExperienceItem = ({ work }: ExperienceItemProps) => {
           <a
             href={work.companyUrl}
             target="_blank"
+            rel="noreferrer"
             className="text-gray-500 hover:text-emerald-500 transition-colors"
           >
             @{work.companyName}

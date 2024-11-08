@@ -54,7 +54,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         className="my-6 sm:my-12 flex items-center gap-2 sm:gap-4 flex-col sm:flex-row"
       >
         {project.githubUrl && (
-          <a href={project.githubUrl} target="_blank">
+          <a href={project.githubUrl} target="_blank" rel="noreferrer">
             <Button className="min-w-[180px]">
               <TbBrandGithub size={20} />
               Repositorio
@@ -62,7 +62,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
           </a>
         )}
         {project.liveProjectUrl && (
-          <a href={project.liveProjectUrl} target="_blank">
+          <a href={project.liveProjectUrl} target="_blank" rel="noreferrer">
             <Button className="min-w-[180px]">
               <FiGlobe size={20} />
               Projeto Online
