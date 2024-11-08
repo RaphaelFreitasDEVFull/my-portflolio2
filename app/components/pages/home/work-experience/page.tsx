@@ -19,7 +19,7 @@ const WorkExperience = ({ works }: WorkExperienceProps) => {
       </div>
       <div className="flex flex-col gap-4">
         {works.map((work) => (
-          <ExperienceItem work={work} />
+          <ExperienceItem work={work} key={work.companyName} />
         ))}
       </div>
     </section>
