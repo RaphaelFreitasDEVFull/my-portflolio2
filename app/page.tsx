@@ -11,7 +11,7 @@ const getPageData = async (): Promise<HomePageData> => {
     introduction {
       raw
     }
-    introTechnologies {
+    introTechnologies(first:100) {
       name
     }
     profilePicture {
@@ -21,7 +21,7 @@ const getPageData = async (): Promise<HomePageData> => {
       iconSvg
       link
     }
-    knowTechs {
+    knowTechs(first:100) {
       iconSvg
       name
       startDate
@@ -49,7 +49,7 @@ const getPageData = async (): Promise<HomePageData> => {
         description {
           raw
         }
-        technologies {
+        technologies(first: 100) {
           name
         }
     }
