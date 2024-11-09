@@ -1,6 +1,6 @@
 'use client'
 
-import SectionTitle from '@/app/components/section-title/page'
+import SectionTitle from '@/app/components/section-title'
 import KnowTech from './know-tech'
 import { KnowTechs as IKnowTech } from '@/app/types/projects'
 import { motion } from 'framer-motion'

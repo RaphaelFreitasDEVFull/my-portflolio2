@@ -3,7 +3,7 @@
 import { Button } from '@/app/components/Button'
 import CMSIcon from '@/app/components/cms-icon'
 import RichText from '@/app/components/rich-text'
-import TechBadge from '@/app/components/tech-badge/page'
+import TechBadge from '@/app/components/tech-badge'
 import { HomePageInfo } from '@/app/types/page-info'
 import Image from 'next/image'
 import { HiArrowNarrowRight } from 'react-icons/hi'

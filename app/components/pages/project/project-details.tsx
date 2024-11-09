@@ -1,7 +1,7 @@
 'use client'
 
-import SectionTitle from '../../section-title/page'
-import TechBadge from '../../tech-badge/page'
+import SectionTitle from '../../section-title'
+import TechBadge from '../../tech-badge'
 import { Button } from '../../Button'
 import { TbBrandGithub } from 'react-icons/tb'
 import { FiGlobe } from 'react-icons/fi'

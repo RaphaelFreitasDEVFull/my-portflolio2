@@ -1,4 +1,4 @@
-import SectionTitle from '@/app/components/section-title/page'
+import SectionTitle from '@/app/components/section-title'
 import ExperienceItem from './experience-item'
 import { WorkExperience as IWorkExperience } from '@/app/types/page-info'
 

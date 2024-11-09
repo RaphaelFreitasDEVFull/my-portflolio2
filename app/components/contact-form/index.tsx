@@ -2,7 +2,7 @@
 
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Button } from '../Button'
-import SectionTitle from '../section-title/page'
+import SectionTitle from '../section-title'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import axios from 'axios'

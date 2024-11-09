@@ -1,7 +1,7 @@
 'use client'
 
 import RichText from '@/app/components/rich-text'
-import TechBadge from '@/app/components/tech-badge/page'
+import TechBadge from '@/app/components/tech-badge'
 import { WorkExperience } from '@/app/types/page-info'
 import { differenceInMonths, differenceInYears, format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
