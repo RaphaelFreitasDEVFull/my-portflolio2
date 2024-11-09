@@ -57,7 +57,7 @@ const getPageData = async (): Promise<HomePageData> => {
 }
   `
 
-  return fetchHighGraph(query, 60 * 60 * 24)
+  return fetchHighGraph(query, 60)
 }
 
 export default async function Home() {
