@@ -1,5 +1,5 @@
 import { cn } from '@/app/lib/utils'
-import { ButtonHTMLAttributes, ReactNode } from 'react'
+import { ButtonHTMLAttributes } from 'react'
 
 // Defina ButtonProps com todos os atributos do button HTML + children explicitamente
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
