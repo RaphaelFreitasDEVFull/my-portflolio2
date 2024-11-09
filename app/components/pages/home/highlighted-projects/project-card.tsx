@@ -1,6 +1,6 @@
 'use client'
 
-import Link from '@/app/components/link/page'
+import Link from '@/app/components/link'
 import TechBadge from '@/app/components/tech-badge/page'
 import { Project } from '@/app/types/projects'
 import Image from 'next/image'

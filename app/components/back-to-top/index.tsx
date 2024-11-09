@@ -1,9 +1,9 @@
 'use client'
 
 import { TbArrowNarrowUp } from 'react-icons/tb'
-import Button from '../Button'
 import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Button } from '../Button'
 
 const BackToTop = () => {
   const scrollToTop = () => {

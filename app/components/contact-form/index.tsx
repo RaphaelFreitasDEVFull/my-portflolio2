@@ -1,7 +1,7 @@
 'use client'
 
 import { HiArrowNarrowRight } from 'react-icons/hi'
-import Button from '../Button'
+import { Button } from '../Button'
 import SectionTitle from '../section-title/page'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'

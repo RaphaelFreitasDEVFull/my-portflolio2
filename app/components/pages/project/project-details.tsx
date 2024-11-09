@@ -2,10 +2,10 @@
 
 import SectionTitle from '../../section-title/page'
 import TechBadge from '../../tech-badge/page'
-import Button from '../../Button'
+import { Button } from '../../Button'
 import { TbBrandGithub } from 'react-icons/tb'
 import { FiGlobe } from 'react-icons/fi'
-import Link from '../../link/page'
+import Link from '../../link'
 import { HiArrowNarrowLeft } from 'react-icons/hi'
 import { RichText } from '@graphcms/rich-text-react-renderer'
 import { motion } from 'framer-motion'

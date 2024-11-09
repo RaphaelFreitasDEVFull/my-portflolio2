@@ -1,7 +1,7 @@
 'use client'
 
 import { HiArrowNarrowLeft } from 'react-icons/hi'
-import Link from '../../link/page'
+import Link from '../../link'
 import SectionTitle from '../../section-title/page'
 import { motion } from 'framer-motion'
 
