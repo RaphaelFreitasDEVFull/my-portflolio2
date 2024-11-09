@@ -10,6 +10,7 @@ type KnowTechProps = {
 }
 
 const KnowTechs = ({ techs }: KnowTechProps) => {
+  console.log(techs.length)
   return (
     <section className="container py-16 ">
       <SectionTitle subtitle="competências" title="Conhecimentos" />
