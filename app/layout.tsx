@@ -1,10 +1,10 @@
 import { ReactNode } from 'react'
-import { Toaster } from 'react-hot-toast'
 import Header from './components/Header'
 import BackToTop from './components/back-to-top'
 import ContactForm from './components/contact-form'
 import Footer from './components/footer'
 import { Inter, IBM_Plex_Mono } from 'next/font/google'
+import Toaster from './components/toaster'
 
 const inter = Inter({
   variable: '--font-inter',
