@@ -2,13 +2,13 @@
 
 import { Button } from '@/app/components/Button'
 import CMSIcon from '@/app/components/cms-icon'
-import RichText from '@/app/components/rich-text'
 import TechBadge from '@/app/components/tech-badge'
+import { techBadgeAnimation } from '@/app/lib/animation'
 import { HomePageInfo } from '@/app/types/page-info'
+import { RichText } from '@graphcms/rich-text-react-renderer'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { HiArrowNarrowRight } from 'react-icons/hi'
-import { motion } from 'framer-motion'
-import { techBadgeAnimation } from '@/app/lib/animation'
 
 type HeroSectionProps = {
   homeInfo: HomePageInfo

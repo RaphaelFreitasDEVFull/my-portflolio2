@@ -1,8 +1,8 @@
 'use client'
 
-import { TbArrowNarrowUp } from 'react-icons/tb'
-import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useState, useCallback, useEffect } from 'react'
+import { TbArrowNarrowUp } from 'react-icons/tb'
 import { Button } from '../Button'
 
 const BackToTop = () => {

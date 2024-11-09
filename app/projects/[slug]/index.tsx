@@ -1,10 +1,6 @@
 import ProjectSections from '@/app/components/pages/project/proejct-sections'
 import ProjectDetails from '@/app/components/pages/project/project-details'
-import {
-  ProjectPageData,
-  ProjectPageDataStatic,
-  ProjectsPageData,
-} from '@/app/types/page-info'
+import { ProjectsPageData, ProjectPageDataStatic } from '@/app/types/page-info'
 import { fetchHighGraph } from '@/app/utils/fetchHighGraph'
 import { Metadata } from 'next'
 

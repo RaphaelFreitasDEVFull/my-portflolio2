@@ -1,16 +1,16 @@
 'use client'
 
-import SectionTitle from '../../section-title'
-import TechBadge from '../../tech-badge'
-import { Button } from '../../Button'
-import { TbBrandGithub } from 'react-icons/tb'
-import { FiGlobe } from 'react-icons/fi'
-import Link from '../../link'
-import { HiArrowNarrowLeft } from 'react-icons/hi'
+import { fadeUpAnimation, techBadgeAnimation } from '@/app/lib/animation'
+import { Project } from '@/app/types/projects'
 import { RichText } from '@graphcms/rich-text-react-renderer'
 import { motion } from 'framer-motion'
-import { Project } from '@/app/types/projects'
-import { fadeUpAnimation, techBadgeAnimation } from '@/app/lib/animation'
+import Link from 'next/link'
+import { HiArrowNarrowLeft } from 'react-icons/hi'
+import { TbBrandGithub } from 'react-icons/tb'
+import { Button } from '../../Button'
+import SectionTitle from '../../section-title'
+import TechBadge from '../../tech-badge'
+import { FiGlobe } from 'react-icons/fi'
 
 type ProjectDetailsProps = {
   project: Project

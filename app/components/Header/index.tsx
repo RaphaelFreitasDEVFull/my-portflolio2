@@ -1,9 +1,9 @@
 'use client'
 
-import Image from 'next/image'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 import NavItem from './nav-item'
-import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const NAV_ITEM = [
   { label: 'Home', href: '/' },

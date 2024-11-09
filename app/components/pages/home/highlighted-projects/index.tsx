@@ -1,9 +1,9 @@
 import HorizontalDivider from '@/app/components/divider/horizontal'
 import SectionTitle from '@/app/components/section-title'
-import ProjectCard from './project-card'
-import Link from '@/app/components/link'
-import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Project } from '@/app/types/projects'
+import Link from 'next/link'
+import { HiArrowNarrowRight } from 'react-icons/hi'
+import ProjectCard from './project-card'
 
 type HighLightedProjectsProps = {
   projects: Project[]

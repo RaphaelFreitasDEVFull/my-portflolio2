@@ -1,11 +1,10 @@
-import { Inter, IBM_Plex_Mono } from 'next/font/google'
-import './globals.css'
 import { ReactNode } from 'react'
-import Header from './components/Header/page'
-import ContactForm from './components/contact-form'
-import Footer from './components/footer/page'
+import { Toaster } from 'react-hot-toast'
+import Header from './components/Header'
 import BackToTop from './components/back-to-top'
-import Toaster from './components/toaster'
+import ContactForm from './components/contact-form'
+import Footer from './components/footer'
+import { Inter, IBM_Plex_Mono } from 'next/font/google'
 
 const inter = Inter({
   variable: '--font-inter',

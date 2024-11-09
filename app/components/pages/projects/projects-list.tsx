@@ -1,10 +1,10 @@
 'use client'
 
-import Link from 'next/link'
-import ProjectCard from './porject-card'
+import { fadeUpAnimation } from '@/app/lib/animation'
 import { Project } from '@/app/types/projects'
 import { motion } from 'framer-motion'
-import { fadeUpAnimation } from '@/app/lib/animation'
+import Link from 'next/link'
+import ProjectCard from './porject-card'
 
 type ProjectsListProps = {
   projects: Project[]

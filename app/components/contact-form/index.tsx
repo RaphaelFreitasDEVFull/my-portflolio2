@@ -1,16 +1,15 @@
 'use client'
 
-import { HiArrowNarrowRight } from 'react-icons/hi'
-import { Button } from '../Button'
-import SectionTitle from '../section-title'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
+import { fadeUpAnimation } from '@/app/lib/animation'
 import axios from 'axios'
 import { motion } from 'framer-motion'
-
+import { useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
+import { HiArrowNarrowRight } from 'react-icons/hi'
+import { z } from 'zod'
+import { Button } from '../Button'
+import SectionTitle from '../section-title'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { toast } from 'react-hot-toast'
-import { fadeUpAnimation } from '@/app/lib/animation'
 
 const ContactForm = () => {
   const contactFormSchema = z.object({

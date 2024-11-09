@@ -1,13 +1,14 @@
 'use client'
 
-import RichText from '@/app/components/rich-text'
 import TechBadge from '@/app/components/tech-badge'
-import { WorkExperience } from '@/app/types/page-info'
-import { differenceInMonths, differenceInYears, format } from 'date-fns'
-import { ptBR } from 'date-fns/locale'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { fadeUpAnimation, techBadgeAnimation } from '@/app/lib/animation'
+import { RichText } from '@graphcms/rich-text-react-renderer'
+import { format, differenceInMonths, differenceInYears } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
+import { motion } from 'framer-motion'
+
+import { WorkExperience } from '@/app/types/page-info'
+import Image from 'next/image'
 
 type ExperienceItemProps = {
   work: WorkExperience

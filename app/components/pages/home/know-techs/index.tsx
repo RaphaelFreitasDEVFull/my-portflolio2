@@ -1,9 +1,10 @@
 'use client'
 
 import SectionTitle from '@/app/components/section-title'
+import { motion } from 'framer-motion'
 import KnowTech from './know-tech'
 import { KnowTechs as IKnowTech } from '@/app/types/projects'
-import { motion } from 'framer-motion'
+
 type KnowTechProps = {
   techs: IKnowTech[]
 }
