@@ -1,6 +1,6 @@
 'use client'
 
-import Button from '@/app/components/button/page'
+import Button from '@/app/components/Button'
 import CMSIcon from '@/app/components/cms-icon'
 import RichText from '@/app/components/rich-text'
 import TechBadge from '@/app/components/tech-badge/page'

@@ -1,10 +1,9 @@
 import { cn } from '@/app/lib/utils'
 import { ButtonHTMLAttributes } from 'react'
 
-// Defina ButtonProps com todos os atributos do button HTML + children explicitamente
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
 
-const Button = ({ children, className, ...props }: ButtonProps) => {
+export const Button = ({ children, className, ...props }: ButtonProps) => {
   return (
     <button
       className={cn(
@@ -17,5 +16,3 @@ const Button = ({ children, className, ...props }: ButtonProps) => {
     </button>
   )
 }
-
-export default Button
