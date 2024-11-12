@@ -1,7 +1,7 @@
 import HeroSection from './components/pages/home/hero-section'
 import HighLightedProjects from './components/pages/home/highlighted-projects'
 import KnowTechs from './components/pages/home/know-techs'
-import WorkExperience from './components/pages/home/work-experience'
+// import WorkExperience from './components/pages/home/work-experience'
 import { HomePageData } from './types/page-info'
 import { fetchHighGraph } from './utils/fetchHighGraph'
 
