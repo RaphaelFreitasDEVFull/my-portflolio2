@@ -6,7 +6,7 @@ import BackToTop from './components/back-to-top'
 import Toaster from './components/toaster'
 import Footer from './components/footer'
 import Header from './components/Header'
-import Analytics from '@vercel/analytics'
+import Analytics from '@vercel/analytics/next'
 
 const inter = Inter({
   variable: '--font-inter',
