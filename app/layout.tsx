@@ -35,11 +35,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
       <body>
-        <Analytics />
         <Toaster />
         <BackToTop />
         <Header />
         {children}
+        <Analytics />
         <ContactForm />
         <Footer />
       </body>
