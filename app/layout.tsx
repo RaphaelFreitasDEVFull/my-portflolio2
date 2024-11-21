@@ -6,6 +6,7 @@ import BackToTop from './components/back-to-top'
 import Toaster from './components/toaster'
 import Footer from './components/footer'
 import Header from './components/Header'
+import { Analytics } from '@vercel/analytics'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
       <body>
+        <Analytics />
         <Toaster />
         <BackToTop />
         <Header />
