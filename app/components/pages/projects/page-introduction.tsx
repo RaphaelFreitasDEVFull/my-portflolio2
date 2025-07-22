@@ -21,10 +21,11 @@ const PageIntroduction = () => {
         className="flex flex-col items-center"
       >
         <p className="text-gray-400 text-center max-w-[640px] my-6 text-sm sm:text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus non
-          nesciunt quibusdam ullam fuga sapiente, debitis autem illum eveniet
-          alias. Ea amet voluptate asperiores, repudiandae natus quam. Modi, eos
-          officia.
+          Aqui apresento uma seleção dos meus projetos mais recentes e
+          relevantes, desenvolvidos com dedicação e criatividade. Cada projeto
+          reflete minhas habilidades técnicas, soluções inovadoras e meu
+          compromisso com a qualidade. Explore para conhecer um pouco mais do
+          meu trabalho e do meu estilo de desenvolvimento.
         </p>
         <Link href={'/'}>
           <HiArrowNarrowLeft />
