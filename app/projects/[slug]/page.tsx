@@ -4,11 +4,7 @@ import { ProjectsPageData, ProjectPageDataStatic } from '@/app/types/page-info'
 import { fetchHighGraph } from '@/app/utils/fetchHighGraph'
 import { Metadata } from 'next'
 
-type ProjectPageProps = {
-  params: { slug: string }
-  searchParams?: Record<string, string | string[]>
-}
-
+// ✅ Função para buscar os dados do projeto
 const getPageDetails = async (slug: string): Promise<ProjectsPageData> => {
   const query = `
     query MyQuery {
@@ -39,11 +35,11 @@ const getPageDetails = async (slug: string): Promise<ProjectsPageData> => {
       }
     }
   `
-
-  return fetchHighGraph(query, 1000 * 60 * 60 * 24) // 1 day
+  return fetchHighGraph(query, 1000 * 60 * 60 * 24)
 }
 
-const Project = async ({ params }: ProjectPageProps) => {
+// ✅ Componente da página com tipagem inline segura
+const ProjectPage = async ({ params }: { params: { slug: string } }) => {
   const { project } = await getPageDetails(params.slug)
 
   return (
@@ -54,6 +50,7 @@ const Project = async ({ params }: ProjectPageProps) => {
   )
 }
 
+// ✅ Geração dos slugs para rotas estáticas
 export async function generateStaticParams() {
   const query = `
     query ProjectSlugQuery {
@@ -62,14 +59,16 @@ export async function generateStaticParams() {
       }
     }
   `
-
   const { projects } = await fetchHighGraph<ProjectPageDataStatic>(query)
-  return projects.map((p) => ({ slug: p.slug }))
+  return projects.map((project) => ({ slug: project.slug }))
 }
 
+// ✅ Metadata com tipagem inline também
 export async function generateMetadata({
   params,
-}: ProjectPageProps): Promise<Metadata> {
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
   const { project } = await getPageDetails(params.slug)
 
   return {
@@ -81,4 +80,4 @@ export async function generateMetadata({
   }
 }
 
-export default Project
+export default ProjectPage
