@@ -4,7 +4,7 @@ import { ProjectsPageData, ProjectPageDataStatic } from '@/app/types/page-info'
 import { fetchHighGraph } from '@/app/utils/fetchHighGraph'
 import { Metadata } from 'next'
 
-type PageProps = {
+type ProjectPageProps = {
   params: { slug: string }
   searchParams?: Record<string, string | string[]>
 }
@@ -43,7 +43,7 @@ const getPageDetails = async (slug: string): Promise<ProjectsPageData> => {
   return fetchHighGraph(query, 1000 * 60 * 60 * 24) // 1 day
 }
 
-const Project = async ({ params }: PageProps) => {
+const Project = async ({ params }: ProjectPageProps) => {
   const { project } = await getPageDetails(params.slug)
 
   return (
@@ -69,7 +69,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}: PageProps): Promise<Metadata> {
+}: ProjectPageProps): Promise<Metadata> {
   const { project } = await getPageDetails(params.slug)
 
   return {
