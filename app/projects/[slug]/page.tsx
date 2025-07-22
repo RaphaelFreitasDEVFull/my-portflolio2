@@ -5,9 +5,8 @@ import { fetchHighGraph } from '@/app/utils/fetchHighGraph'
 import { Metadata } from 'next'
 
 type ProjectProps = {
-  params: {
-    slug: string
-  }
+  params: { slug: string }
+  searchParams?: Record<string, string | string[]>
 }
 
 const getPageDatails = async (slug: string): Promise<ProjectsPageData> => {
@@ -47,8 +46,8 @@ const getPageDatails = async (slug: string): Promise<ProjectsPageData> => {
   )
 }
 
-const Project = async ({ params: { slug } }: ProjectProps) => {
-  const { project } = await getPageDatails(slug)
+const Project = async ({ params }: ProjectProps) => {
+  const { project } = await getPageDatails(params.slug)
 
   return (
     <section>
