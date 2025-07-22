@@ -73,7 +73,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             />
           ))}
         </div>
-        <Link href={`/projects/${project.slug}`}>
+        <Link
+          href={`/projects/${project.slug}`}
+          className="flex items-center gap-2"
+        >
           Ver Projeto <HiArrowNarrowRight />
         </Link>
       </div>

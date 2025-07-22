@@ -20,7 +20,13 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between">
         <Link href={'/'}>
-          <Image src={'/images/logo.svg'} height={49} width={48} alt="logo" />
+          <Image
+            src={'/images/logo.png'}
+            height={200}
+            width={130}
+            alt="logo"
+            className="-ml-4"
+          />
         </Link>
         <nav className="flex items-center gap-4 sm:gap-10">
           {NAV_ITEM.map((item) => (
