@@ -4,50 +4,47 @@ import { ProjectsPageData, ProjectPageDataStatic } from '@/app/types/page-info'
 import { fetchHighGraph } from '@/app/utils/fetchHighGraph'
 import { Metadata } from 'next'
 
-type ProjectProps = {
+type PageProps = {
   params: { slug: string }
   searchParams?: Record<string, string | string[]>
 }
 
-const getPageDatails = async (slug: string): Promise<ProjectsPageData> => {
+const getPageDetails = async (slug: string): Promise<ProjectsPageData> => {
   const query = `
     query MyQuery {
-  project(where: {slug: "${slug}"}) {
-    githubUrl
-    liveProjectUrl
-    title
-    shortDescription
-    descripition {
-      raw
-      text
-    }
-    technologies {
-      name
-    }
-    pageThumbnail {
-      url
-    }
-    thumnail {
-      url
-    }
-    sections {
-      image {
-        url
+      project(where: {slug: "${slug}"}) {
+        githubUrl
+        liveProjectUrl
+        title
+        shortDescription
+        descripition {
+          raw
+          text
+        }
+        technologies {
+          name
+        }
+        pageThumbnail {
+          url
+        }
+        thumnail {
+          url
+        }
+        sections {
+          image {
+            url
+          }
+          title
+        }
       }
-      title
     }
-  }
-}
-    `
+  `
 
-  return fetchHighGraph(
-    query,
-    1000 * 60 * 60 * 24, // 1 day
-  )
+  return fetchHighGraph(query, 1000 * 60 * 60 * 24) // 1 day
 }
 
-const Project = async ({ params }: ProjectProps) => {
-  const { project } = await getPageDatails(params.slug)
+const Project = async ({ params }: PageProps) => {
+  const { project } = await getPageDetails(params.slug)
 
   return (
     <section>
@@ -58,21 +55,22 @@ const Project = async ({ params }: ProjectProps) => {
 }
 
 export async function generateStaticParams() {
-  const query = `query ProjectSlugQuery {
-    projects(first: 100){
-      slug
+  const query = `
+    query ProjectSlugQuery {
+      projects(first: 100) {
+        slug
+      }
     }
-  }`
+  `
 
   const { projects } = await fetchHighGraph<ProjectPageDataStatic>(query)
-
-  return projects
+  return projects.map((p) => ({ slug: p.slug }))
 }
 
 export async function generateMetadata({
-  params: { slug },
-}: ProjectProps): Promise<Metadata> {
-  const { project } = await getPageDatails(slug)
+  params,
+}: PageProps): Promise<Metadata> {
+  const { project } = await getPageDetails(params.slug)
 
   return {
     title: project.title,
